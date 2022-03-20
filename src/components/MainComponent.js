@@ -11,7 +11,7 @@ import { connect } from "react-redux";
 
 const mapStateToProps = state => {
   return {
-    campsites: state.campsite,
+    campsites: state.campsites,
     comments: state.comments,
     partners: state.partners,
     promotions: state.promotions,
@@ -20,6 +20,9 @@ const mapStateToProps = state => {
 class Main extends Component {
   render() {
     const HomePage = () => {
+      console.group("Homepage");
+      console.log("Homepage - this.props", this.props);
+      console.groupEnd();
       return (
         <Home
           campsite={
